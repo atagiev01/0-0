@@ -1,0 +1,65 @@
+@use 'utilities/variables' as *;
+
+@mixin  montserrat_fs-25px_fw_lh_ls($color:transparent,$px:0) {
+    color: $color;
+    font-family: $ff_montserrat;
+    font-size: $px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 113.9%; /* 28.475px */
+    letter-spacing: 0.75px;
+    text-decoration: none;
+}
+
+@mixin btn {
+    width: $percentage;
+    height: $percentage;
+    border: $none;
+    outline: $none;
+}
+
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex__end{
+    display: flex;
+    justify-content: flex-end;
+}
+@mixin flex__justify__and__align_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex__between___items-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin f_none__column{
+    display: $none;
+    flex-direction: column;
+}
+
+
+@mixin product-box-offer{
+    @include flex__justify__and__align_center;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 65px;
+    height: 24px;
+    color: #ffffff;
+    background-color: #e63b3b;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    transition: $none !important;
+    animation: $none;
+    z-index: 100;
+    font-family: 'Open Sans',sans-serif;
+}

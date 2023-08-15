@@ -1,0 +1,125 @@
+@use 'utilities/variables' as *;
+@use 'utilities/mixin' ;
+
+
+#openModalBtn{
+  font-size: 20px;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+#myModal{
+  display:$none;
+}
+.modal {
+    display:$none; 
+    position: fixed;
+    z-index: $z-index;
+    left: $null;
+    top: $null;
+    width: $percentage;
+    height: $percentage;
+    background-color: rgba(0,0,0,0.4); 
+    &__modal-content {
+      background-color: #fefefe;
+      padding: 40px;
+      border: 1px solid #888;
+      width: $percentage;
+      max-width: 644px;
+      height: $percentage;
+      position: absolute;
+      overflow: scroll;
+      text-align: justify;
+      right: 0;
+      .head-modal{
+        padding: 50px 0;
+        p{
+          color: #2D2D2D;
+          font-family: Montserrat !important ;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: bolder;
+          line-height: 113.9%; /* 28.475px */
+          letter-spacing: 0.75px;
+        }
+      }
+
+      .flex-modal{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        p{
+          color: #2D2D2D;
+          font-family: Montserrat !important ;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          padding-bottom:10px;
+
+        }
+        span{
+          font-size: 16px;
+          color: #2D2D2D;
+          font-family: Montserrat !important ;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration:$none;
+    cursor: pointer;
+  }
+
+
+  
+
+
+
+
+
+/* Carousel stil */
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: $percentage;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-card {
+  flex: 0 0 $percentage;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* JavaScript ilə göstərilməli stil */
+.active-card {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.inactive-card {
+  opacity: 0;
+  pointer-events:$none;
+  transition: opacity 0.4s ease-in-out;
+}
